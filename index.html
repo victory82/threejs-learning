@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="使用 Vite 和 Three.js 学习 3D 场景、相机、材质、灯光与动画。" />
+    <title>Three.js 练习场</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <canvas id="scene" role="img" aria-label="可拖拽旋转视角的 Three.js 立方体场景"></canvas>
+    <main class="intro">
+      <p class="eyebrow">THREE.JS / 01</p>
+      <h1>第一个 3D 场景</h1>
+      <p>场景 · 相机 · 几何体 · 材质 · 灯光 · 动画</p>
+      <p class="hint">拖拽旋转视角，滚轮缩放，右键拖拽平移。</p>
+      <p class="hint">从 <code>src/main.js</code> 开始，修改代码即可实时预览。</p>
+    </main>
+    <p id="webgl-error" class="error" role="alert" hidden>
+      当前浏览器无法使用 WebGL 2，请开启硬件加速或使用支持 WebGL 2 的浏览器后重试。
+    </p>
+    <noscript>此练习需要启用 JavaScript。</noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
