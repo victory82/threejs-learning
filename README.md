@@ -4,25 +4,25 @@
 
 ## 环境与启动
 
-使用 Node.js 22.12 或更高版本，推荐 Node.js 24（项目包含 `.nvmrc`）。浏览器需要支持 WebGL 2 并开启硬件加速。
+使用 **Node.js 24 或更高版本**，项目包含 `.nvmrc`，并通过 `engines.node` 声明最低版本。包管理器使用 **pnpm 11.5.0**，版本记录在 `package.json` 的 `packageManager` 字段中。浏览器需要支持 WebGL 2 并开启硬件加速。
 
 ```bash
 # 如果使用 nvm，可先运行 nvm use
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 打开终端显示的本地地址，默认是 `http://localhost:5173`。
 
-克隆后如果需要严格按照锁文件安装依赖，可以使用 `npm ci` 替代 `npm install`。
+克隆后如果需要严格按照锁文件安装依赖，可以使用 `pnpm install --frozen-lockfile`。
 
 ## 常用命令
 
 | 命令 | 用途 |
 | --- | --- |
-| `npm run dev` | 启动开发服务器，修改代码后实时刷新 |
-| `npm run build` | 构建到 `dist/` |
-| `npm run preview` | 本地预览构建结果，先运行 build |
+| `pnpm dev` | 启动开发服务器，修改代码后实时刷新 |
+| `pnpm build` | 构建到 `dist/` |
+| `pnpm preview` | 本地预览构建结果，先运行 build |
 
 ## 项目结构
 
@@ -35,7 +35,7 @@ threejs-learning/
 │   └── style.css      # 画布与说明文字样式
 ├── index.html         # HTML 入口
 ├── package.json      # 依赖与开发命令
-└── package-lock.json # 固定依赖版本
+└── pnpm-lock.yaml    # 固定依赖版本
 ```
 
 `node_modules/` 和 `dist/` 已加入 `.gitignore`，不提交到仓库。
